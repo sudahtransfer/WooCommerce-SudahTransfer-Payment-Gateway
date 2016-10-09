@@ -20,7 +20,7 @@ function woocommerce_sudahtransfer_init(){
       $this ->has_fields = true;
       $this ->init_form_fields();
       $this ->init_settings();
-       $this->icon =  plugins_url( 'sudahtransfer-icon32.png', __FILE__ );
+       $this->icon =  plugins_url( '/img/sudahtransfer-icon32.png', __FILE__ );
       $this ->title = $this ->settings['title'];
       $this ->description = $this ->settings['description'];
       $this ->merchant_id = $this ->settings['merchant_id'];
