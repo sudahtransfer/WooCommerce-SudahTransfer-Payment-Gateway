@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 Plugin Name: SudahTransfer
 Plugin URI: https://sudahtransfer.com/
@@ -11,7 +11,7 @@ add_action('plugins_loaded', 'woocommerce_sudahtransfer_init', 0);
 function woocommerce_sudahtransfer_init(){
   if(!class_exists('WC_Payment_Gateway')) return;
 
-  class WC_Brahm_Sudahtransfer extends WC_Payment_Gateway{
+  class WC_Sudahtransfer extends WC_Payment_Gateway{
 
 	// Setup our Gateway's id, description and other values
     public function __construct(){
@@ -63,7 +63,7 @@ function woocommerce_sudahtransfer_init(){
                     'title' => __('Cancel Page (URL)','sudah-transfer'),
                     'type' => 'select',
                     'options' => $this -> get_pages('Select Page'),
-                    'description' => "WWhere the customer goes when the transaction is cancelled."
+                    'description' => "Where the customer goes when the transaction is cancelled."
                 ),
         'title' => array(
           'title' => __('Title:', 'sudah-transfer'),
@@ -328,11 +328,11 @@ function woocommerce_sudahtransfer_init(){
    /**
      * Add the Gateway to WooCommerce
      **/
-   function woocommerce_add_brahm_sudahtransfer_gateway($methods) {
-    $methods[] = 'WC_Brahm_Sudahtransfer';
+   function woocommerce_add_sudahtransfer_gateway($methods) {
+    $methods[] = 'WC_Sudahtransfer';
     return $methods;
   }
 
-  add_filter('woocommerce_payment_gateways', 'woocommerce_add_brahm_sudahtransfer_gateway' );
+  add_filter('woocommerce_payment_gateways', 'woocommerce_add_sudahtransfer_gateway' );
 }
 
