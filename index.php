@@ -74,7 +74,7 @@ function woocommerce_sudahtransfer_init(){
           'title' => __('Description:', 'sudah-transfer'),
           'type' => 'textarea',
           'description' => __('This controls the description which the user sees during checkout.', 'sudah-transfer'),
-          'default' => __('Beli sekarang, bayar belakangan. Pay after delivery. Easy, fast & secure.', 'sudah-transfer')),
+          'default' => __('Beli sekarang, bayar belakangan. Pay after delivery.', 'sudah-transfer')),
         
         'merchant_level' => array(
           'title' => __('Merchant Level', 'sudah-transfer'),
@@ -108,7 +108,7 @@ function woocommerce_sudahtransfer_init(){
         // Generate the HTML For the settings form.
       $this ->generate_settings_html();
       echo '</table>';
-       echo '<p>'.__('Enter your SudahTransfer API credentials to allow your customers pay via SudahTransfer. How to get API Credentials? Sign up for a merchant account <a href="https://sudahtransfer.com/merchant/">here</a>').'</p>';
+       echo '<p>'.__('Enter your SudahTransfer API credentials to allow your customers pay via SudahTransfer. How to get API Credentials? Sign up for a merchant account <a href="https://sudahtransfer.com/merchant/" target="_blank">here</a>').'</p>';
 
     }
 
