@@ -87,7 +87,7 @@ function woocommerce_sudahtransfer_init(){
 
         'merchant_api_key' => array(
           'title' => __('API Key', 'sudah-transfer'),
-          'type' => 'password',
+          'type' => 'text',
           'description' => __('')),
         'merchant_secret_key' => array(
           'title' => __('Secret Key', 'sudah-transfer'),
